@@ -1,0 +1,15 @@
+<section>
+<p>home works</p>
+    <div class="container">
+        <div class="principal">
+            <div class="menu">
+                <a [routerLink]="['add-alarm']" class="add">+</a>
+            
+            </div>
+
+            <div class="list-container">
+                <app-item-list *ngFor="let alarm of alarmsList" [alarm] = "alarm"></app-item-list>
+            </div>
+        </div>
+    </div>
+</section>

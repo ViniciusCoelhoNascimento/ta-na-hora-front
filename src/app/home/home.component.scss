@@ -1,0 +1,44 @@
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 500px;
+    border-style: solid;
+    border-color: green;
+}
+
+.principal{
+    border-style: solid;
+    border-color: white;
+    border-width: 2px;
+    width:400px;
+    height: 500px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.menu{
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+    margin: 0px;
+    height: fit-content;
+    border-style: solid;
+    border-color: purple;
+}
+
+.add{
+    font-weight: bold;
+    font-size: 32px;
+    margin: 0%;
+    border-style: solid;
+    border-radius: 100%;
+    padding: 0px 10px 0px 10px;
+    background-color: green;
+    text-decoration: none;
+}
+
+.add:hover {
+    background-color: greenyellow;
+}
+
