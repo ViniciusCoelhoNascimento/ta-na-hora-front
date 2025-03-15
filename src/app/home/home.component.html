@@ -1,15 +1,20 @@
 <section>
-<p>home works</p>
     <div class="container">
         <div class="principal">
             <div class="menu">
                 <a [routerLink]="['add-alarm']" class="add">+</a>
-            
+                <button (click)="toggleComponent()">{{showList ? 'Adicionar' : 'Voltar'}}</button>
             </div>
 
             <div class="list-container">
-                <app-item-list *ngFor="let alarm of alarmsList" [alarm] = "alarm"></app-item-list>
+                <p>{{showList}}</p>
+                <!--<app-item-list *ngFor="let alarm of alarmsList" [alarm] = "alarm"></app-item-list>-->
             </div>
+
+            <section style="border-style: solid;">
+                <app-list *ngIf="showList"></app-list>
+                <app-add-alarm *ngIf="!showList"></app-add-alarm>
+            </section>
         </div>
     </div>
 </section>

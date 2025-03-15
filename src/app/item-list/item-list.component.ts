@@ -14,6 +14,6 @@ export class ItemListComponent {
 
   constructor (){
 
-    this.next_time = this.alarm.last_time_medicine_taken.getHours() + this.alarm.interval.getHours();
+   this.next_time = this.alarm.last_time_medicine_taken.getHours() + this.alarm.interval.getHours();
   }
 }

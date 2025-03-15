@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { environment } from '../environments/environment';
 import { User } from './interfaces/user';
+import { ItemListComponent } from "./item-list/item-list.component";
+import { AddAlarmComponent } from "./add-alarm/add-alarm.component";
 
 @Component({
   selector: 'app-root',
@@ -13,6 +15,8 @@ import { User } from './interfaces/user';
 })
 export class AppComponent {
   title = 'ta-na-hora';
+
+  showList = true;
 
   mensagem: any;
   user: User = {
@@ -42,8 +46,8 @@ export class AppComponent {
     this.messagingService.requestPermission();
   }
 
-  async postToken() {
-    const response = await fetch(environment.apiURL + 'user/login', {
+  async postTokenGetId() {
+    const response = await fetch(environment.apiURL + 'user/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -64,5 +68,9 @@ export class AppComponent {
       console.log('Error: cannot get user id.')
     }
 
+  }
+
+  toggleComponent(){
+    this.showList = !this.showList;
   }
 }
