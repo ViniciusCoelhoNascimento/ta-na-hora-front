@@ -45,3 +45,8 @@ Thumbs.db
 .firebase
 *-debug.log
 .runtimeconfig.json
+firebase-messaging-sw.js
+
+#enviroments
+enviroment.prod.ts
+enviroment.ts
